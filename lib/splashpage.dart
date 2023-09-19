@@ -27,6 +27,7 @@ class SplashPage extends StatelessWidget {
         Colors.black12
             ])
         ),
+          child:Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -61,6 +62,7 @@ class SplashPage extends StatelessWidget {
             // fontWeight: FontWeight.bold),
             )
               ],
+          ),
           ),
     ),
     );
