@@ -1,46 +1,48 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_programss/splashpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'loginPage.dart';
-void main(){
+void main() {
   runApp(MaterialApp(
     home: Splash2(),
   ));
 }
 class Splash2 extends StatefulWidget{
   @override
-  State<StatefulWidget> createState() => Splash2State();
+  State<StatefulWidget> createState() => Splash2State(); // define an initial state for the page
 }
-class Splash2State extends State{
+
+class Splash2State extends State {
   @override
-  void iniState(){
-    Timer(Duration(seconds: 4),(){
+  void initState() {                // what should do when this page  is launched
+    Timer(Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context)=>Login_Page()));
+          builder: (context)=> Login_Page()));
     });
     super.initState();
   }
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+    //BuildContext - used to locate widgets on the widget tree and monitor their actions
     return Scaffold(
-      //backgroundColor: Colors.black
+      //  backgroundColor: Colors.black,
       body: Container(
-        decoration:const  BoxDecoration(
-          //color: Colors.black38
-          // image: DecorationImage(
-          //   fit:BoxFit.cover,
-          //     image: NetworkImage("https://images.unsplash.com/photo-1694501898581-49fd192e65fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=900&q=60"))
+        decoration: const BoxDecoration(
+          // color: Colors.black38
+          //  image: DecorationImage(
+          //      fit: BoxFit.cover,
+          //      image: NetworkImage("YWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80https://plus.unsplash.com/premium_photo-1672582776474-fc85ebaa1b73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1w"))
             gradient: LinearGradient(
                 begin: Alignment.bottomLeft,
                 end: Alignment.topRight,
-                colors:[
+                colors: [
                   Colors.green,
                   Colors.white70,
                   Colors.black12
                 ])
         ),
-        child:Center(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -50,29 +52,29 @@ class Splash2State extends State{
               //   size: 80,
               //   color: Colors.red,
               // ),
-              ///adding external icons (flutter accessed it as image)
-              ///assert image as
-              //  Image(
-              // image: AssetImage("assets/icons/tree.png"),
-              //  width: 100 ,
-              //  height: 100,
+              /// adding external icons (flutter accessed it as image)
+              /// Asset image as image provider
+              // Image(
+              //   image: AssetImage("assets/icons/tree.png"),
+              //   width: 100,
+              //   height: 100,
               // ),
-              ///network image as image provider
+              /// network image as image provider
               const Image(
-                image: NetworkImage("https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/template_x_application_office-512.png"),
-                width: 100,height: 100,
+                image: NetworkImage("https://cdn1.iconfinder.com/data/icons/business-and-finance-flat/512/solving_puzzle_issue_thinking_solution-512.png"),
+                width: 100, height: 100,
               ),
               Text(
                 "My Application",
                 style: GoogleFonts.dancingScript(
-                    fontSize:30,
-                    color:Colors.lightBlueAccent,
-                    fontWeight:FontWeight.bold
+                    fontSize: 30,
+                    color: Colors.lightBlueAccent,
+                    fontWeight: FontWeight.bold
                 ),
-                //   style: TextStyle(
+                // style: TextStyle(
                 //     fontSize: 20,
-                //     color: Colors.green,
-                // fontWeight: FontWeight.bold),
+                //     color: Colors.blue,
+                //     fontWeight: FontWeight.bold),
               )
             ],
           ),
@@ -81,7 +83,3 @@ class Splash2State extends State{
     );
   }
 }
-
-
-
-

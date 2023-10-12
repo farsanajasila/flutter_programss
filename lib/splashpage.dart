@@ -46,7 +46,7 @@ class SplashPage extends StatelessWidget {
             // ),
             ///network image as image provider
             const Image(
-                 image: NetworkImage("https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-part-2/512/template_x_application_office-512.png"),
+                 image: NetworkImage("https://cdn1.iconfinder.com/data/icons/business-and-finance-flat/512/solving_puzzle_issue_thinking_solution-512.png"),
                  width: 100,height: 100,
              ),
             Text(
