@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_programss/storages/simple%20login/loginshared.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'loginshared.dart';
 
 class Home_Shared extends StatefulWidget {
   @override
